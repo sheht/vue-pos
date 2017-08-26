@@ -21,6 +21,21 @@ var autoOpenBrowser = !!config.dev.autoOpenBrowser
 var proxyTable = config.dev.proxyTable
 
 var app = express()
+
+//本地数据模拟
+var oftenGoods = require('../oftenGoods.json')
+var typeGoods = require('../typeGoods.json')
+var apiRouter = express.Router();
+
+apiRouter.get('/oftenGoods',function(req,res){
+  res.json(oftenGoods);
+})
+apiRouter.get('/typeGoods',function(req,res){
+  res.json(typeGoods);
+})
+
+app.use('/api',apiRouter);
+
 var compiler = webpack(webpackConfig)
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {
