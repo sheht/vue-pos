@@ -3,7 +3,9 @@
   <ul>
     <li>
       <i class="icon iconfont icon-pay"></i>
-      <div>收银</div>
+      <div>
+        点餐
+      </div>
     </li>
     <li>
       <i class="icon iconfont icon-index"></i>
