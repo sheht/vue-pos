@@ -4,12 +4,12 @@
     <li>
       <i class="icon iconfont icon-pay"></i>
       <div>
-        点餐
+        <router-link to="/">点餐</router-link>
       </div>
     </li>
     <li>
       <i class="icon iconfont icon-index"></i>
-      <div>店铺</div>
+      <div><router-link to="/test">店铺</router-link></div>
     </li>
     <li>
       <i class="icon iconfont icon-icon1"></i>
@@ -27,13 +27,15 @@
 </div>
 </template>
 <script>
-export default {
-  name:'leftMenu',
-  data() {
-    return {
+  import router from '../../router'
+  export default {
+    router,
+    name:'leftMenu',
+    data() {
+      return {
 
+      }
     }
-  }
 }
 </script>
 <style scoped>
